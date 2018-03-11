@@ -167,36 +167,35 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child:
-            new Row(
-              children: <Widget>[
-                new ListView(children: <Widget>[
-                new Container(
-                    decoration: new BoxDecoration(
-                        border: new Border(
-                            right: new BorderSide(color: Colors.grey))),
-                    child: new Column(children: <Widget>[new Container(
-                        margin: new EdgeInsets.all(10.0),
-                        color: Colors.grey,
-                        child: new Text(
-                            "Termin erstellen", style: new TextStyle(
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black))),
-                    new Container(
-                        margin: new EdgeInsets.all(10.0),
-                        color: Colors.grey,
-                        child: new Text(
-                            "Studio bearbeiten", style: new TextStyle(
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black))),
-                    ],)),
-              ],
-                ),
-                // Row Element
-                new Expanded(child:tableView)
-                // Row End
-              ],),
+        new Row(
+          children: <Widget>[
+            new Column(children: <Widget>[
+              new Container(
+                  child: new Column(children: <Widget>[new Container(
+                      margin: new EdgeInsets.all(10.0),
+                      color: Colors.grey,
+                      child: new Text(
+                          "Termin erstellen", style: new TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black))),
+                  new Container(
+                      margin: new EdgeInsets.all(10.0),
+                      color: Colors.grey,
+                      child: new Text(
+                          "Studio bearbeiten", style: new TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black))),
+                  ],)),
+            ],
+            ),
+            // Row Element
+            new Expanded(child: new Container(decoration: new BoxDecoration(
+                border: new Border(
+                    left: new BorderSide(color: Colors.grey))), child: tableView,))
+            // Row End
+          ],),
       ),
       floatingActionButton: new FloatingActionButton(
         onPressed: _incrementCounter,
