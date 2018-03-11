@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
+
   final String title;
 
   @override
@@ -38,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // ######################################################################## Drawer Element
+    // ################################Drawer Element
     Drawer firstDrawer = new Drawer(
         child: new ListView(children: <Widget>[new Row(
           children: <Widget>[
@@ -64,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.black))),
         ],));
     // #####################################################
-    // ######################################################################## Termine Tabel Row
+    // #####################################################Termine Tabel Row
     List<TableRow> termin = new List<TableRow>();
     termin.add(
         new TableRow(
@@ -165,10 +166,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: new Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: new ListView(
-          children: <Widget>[
-            ("" == "s" ? new Row(
+        child:
+            new Row(
               children: <Widget>[
+                new ListView(children: <Widget>[
                 new Container(
                     decoration: new BoxDecoration(
                         border: new Border(
@@ -190,13 +191,12 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontWeight: FontWeight.bold,
                             color: Colors.black))),
                     ],)),
+              ],
+                ),
                 // Row Element
-
+                new Expanded(child:tableView)
                 // Row End
-              ],) : new Text("")),
-            tableView
-          ],
-        ),
+              ],),
       ),
       floatingActionButton: new FloatingActionButton(
         onPressed: _incrementCounter,
@@ -239,22 +239,17 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildExpandExpandsionTitle() {
-    return new Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[new Column(
-
-        children: <Widget>[
-          new Text("Datum: 10.10.2018"),
-          new Text("Urzeit: 18:00-19:00"),
-          new Text("Gebucht am: 9.10.2018"),
-          new Text("Bestätigt am: 9.10.2018"),
-        ],),
-      new Text("Termin bei: Helga Sabai"),
-      new Text("Termin ablehnen"),
-      new Text("Termin ist zugesagt"),
-        new Column(children: <Widget>[_buildSeparation("Absagen"),
-        _buildSeparation("Bestätigen"),
-        _buildSeparation("Bemerkung hinzufügen")],)
-      ],);
+    return new Column(children: <Widget>[new Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        new Text("Termin Absagen"),
+        new Text("Termin vershcieben"),
+        new Icon(Icons.dehaze)
+      ],),
+    new Text("Termin Annehmen"),
+    new Text("Termin ablehnen"),
+    new Text("Termin ist zugesagt")
+    ],);
   }
 
   Container _buildSeparation(String text) {
