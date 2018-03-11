@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         new TableRow(
           children: <Widget>[new Text("17:30\n-18:00", style: new TextStyle(
               fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Ölmassage (30 Minuten)", style: new TextStyle(
+          new Text("Ölmassage (30 min)", style: new TextStyle(
               fontSize: 20.0, fontWeight: FontWeight.bold)),
           new Text("Johannes Müller", style: new TextStyle(
               fontSize: 20.0, fontWeight: FontWeight.bold)),
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
         new TableRow(
           children: <Widget>[new Text("18:00\n-19:00", style: new TextStyle(
               fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Ölmassage (60 Minuten)", style: new TextStyle(
+          new Text("Ölmassage (60 min)", style: new TextStyle(
               fontSize: 20.0, fontWeight: FontWeight.bold)),
           new Text("Marco Hansen", style: new TextStyle(
               fontSize: 20.0, fontWeight: FontWeight.bold)),
@@ -141,13 +141,13 @@ class _MyHomePageState extends State<MyHomePage> {
             new Container(decoration: new BoxDecoration(
                 border: new Border(bottom: new BorderSide())),),
             _buildExpansionTitle(
-                "18:00\n-19:00", "Ölmassage (60 Minuten)", "Marco Hansen",
+                "18:00\n-19:00", "Ölmassage (60 min)", "Marco Hansen",
                 false, _buildExpandExpandsionTitle()),
             _buildExpansionTitle(
-                "19:00\n-19:30", "Ölmassage (30 Minuten)", "Peter Hansen",
+                "19:00\n-19:30", "Ölmassage (30 min)", "Peter Hansen",
                 true, _buildExpandExpandsionTitle()),
             _buildExpansionTitle(
-                "19:30\n-20:00", "Kräuterstempelmassage (30 Minuten)",
+                "19:30\n-20:00", "Kräuterstempelmassage (30 min)",
                 "Harrison Ford", true, _buildExpandExpandsionTitle()),
 
           ]
