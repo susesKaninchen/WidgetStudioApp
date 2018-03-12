@@ -166,28 +166,26 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildExpandExpandsionTitle() {
-    return new Row(
+    return new Column(children: <Widget>[new Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        new Column(children: <Widget>[
-          new Row(children: <Widget>[
+        new Container(margin: new EdgeInsets.all(5.0),
+          child: new RaisedButton(
+            child: new Text("Termin Absagen"), onPressed: () {},),),
+        new Container(margin: new EdgeInsets.all(5.0),
+          child: new RaisedButton(
+            child: new Text("Termin ändern"), onPressed: () {},),),
+        new Container(margin: new EdgeInsets.all(5.0),
+          child: new RaisedButton(
+            child: new Text("Bemerkung senden"), onPressed: () {},),),
 
-          ],),
-          new Text("Bemerkung: Leider bin ich heute schlecht drauf, könnten sie deswegen ganz nett zu mir sein? ich habe es auch Eilig, also bitte P.")
-        ],),
-        new Column(
-          children: <Widget>[
-            new Container(margin: new EdgeInsets.all(5.0),
-              child: new RaisedButton(
-                child: new Text("Termin Absagen"), onPressed: () {},),),
-            new Container(margin: new EdgeInsets.all(5.0),
-              child: new RaisedButton(
-                child: new Text("Termin vershcieben"), onPressed: () {},),),
-            new Container(margin: new EdgeInsets.all(5.0),
-              child: new RaisedButton(
-                child: new Text("Bemerkung senden"), onPressed: () {},),),
-          ],),
-      ],);
+      ],),
+    new Row(children: <Widget>[
+      new Text("Bemerkung:"),
+      new Text(
+          "Ich bin schlecht n fd jif hidhig jjdshikufdujv bdj, vbh gvbkj fjflkdnlejo ghöfhdizgvkjbcjbclhvjhb chjdh kjfhls hj, hlahl h fhof hs", softWrap: true,)
+    ],),
+    ]);
   }
 
   Container _buildSeparation(String text) {
