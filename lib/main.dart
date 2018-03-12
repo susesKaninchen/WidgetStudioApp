@@ -174,9 +174,15 @@ class _MyHomePageState extends State<MyHomePage> {
         new Text("info"),
         new Column(
           children: <Widget>[
-            new RaisedButton(child: new Text("Termin Absagen")),
-            new RaisedButton(child: new Text("Termin vershcieben")),
-            new RaisedButton(child: new Text("Bemerkung senden")),
+            new Container(margin: new EdgeInsets.all(5.0),
+              child: new RaisedButton(
+                child: new Text("Termin Absagen"), onPressed: () {},),),
+            new Container(margin: new EdgeInsets.all(5.0),
+              child: new RaisedButton(
+                child: new Text("Termin vershcieben"), onPressed: () {},),),
+            new Container(margin: new EdgeInsets.all(5.0),
+              child: new RaisedButton(
+                child: new Text("Bemerkung senden"), onPressed: () {},),),
           ],),
       ],);
   }
