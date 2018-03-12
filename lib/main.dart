@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
               title: new Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  new Container(width: 90.0,
+                  new Container(width: 80.0,
                     child: new Text("Uhrzeit", style: new TextStyle(
                         fontSize: 20.0, fontWeight: FontWeight.bold)),),
                   new Expanded(child: new Row(
@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
               new Column(children: <Widget>[
                 new Container(
                     child: new Column(children: <Widget>[new Container(
-                        margin: new EdgeInsets.all(10.0),
+                        margin: new EdgeInsets.all(5.0),
                         color: Colors.grey,
                         child: new RaisedButton(
                           child: new Text("Termin\nerstellen", style: new TextStyle(
@@ -106,14 +106,46 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.black),textAlign: TextAlign.center), onPressed: () {},
                         )),
                     new Container(
-                        margin: new EdgeInsets.all(10.0),
+                        margin: new EdgeInsets.all(5.0),
                         color: Colors.grey,
                         child:new RaisedButton(
                             child: new Text("Studio\nbearbeiten", style: new TextStyle(
+                                fontSize: 30.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),textAlign: TextAlign.center), onPressed: () {})),
+                    new Container(
+                        margin: new EdgeInsets.all(5.0),
+                        color: Colors.grey,
+                        child:new RaisedButton(
+                            child: new Text("Aktion\nerstellen", style: new TextStyle(
+                                fontSize: 30.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),textAlign: TextAlign.center), onPressed: () {})),
+                    ],)),
+                new Container(
+                    margin: new EdgeInsets.all(5.0),
+                    color: Colors.grey,
+                    child:new RaisedButton(
+                        child: new Text("Historie", style: new TextStyle(
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.black),textAlign: TextAlign.center), onPressed: () {})),
-                    ],)),
+                new Container(
+                    margin: new EdgeInsets.all(5.0),
+                    color: Colors.grey,
+                    child:new RaisedButton(
+                        child: new Text("Statistik", style: new TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),textAlign: TextAlign.center), onPressed: () {})),
+                new Container(
+                    margin: new EdgeInsets.all(5.0),
+                    color: Colors.grey,
+                    child:new RaisedButton(
+                        child: new Text("HILFE", style: new TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),textAlign: TextAlign.center), onPressed: () {})),
               ],
               ),
 
@@ -141,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: new Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            new Container(width: 90.0,
+            new Container(width: 80.0,
               child: new Text(time, style: new TextStyle(
                   fontSize: 20.0, fontWeight: FontWeight.bold)),),
             new Expanded(
@@ -189,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ],),
     new Container(margin: new EdgeInsets.all(5.0),
         child: new Text(
-          "Bemerkung: Ich bin schlecht n fd jif hidhig jjdshikufdujv bdj, vbh gvbkj fjflkdnlejo ghöfhdizgvkjbcjbclhvjhb chjdh kjfhls hj, hlahl h fhof hs",
+          "Bemerkungs Verlauf:\nKunde: Ich bin schlecht n fd jif hidhig jjdshikufdujv bdj, vbh gvbkj fjflkdnlejo ghöfhdizgvkjbcjbclhvjhb chjdh kjfhls hj, hlahl h fhof hs\nStudio: Ich habe sie nicht verstanden.",
           softWrap: true,)
     ),
     ]);
