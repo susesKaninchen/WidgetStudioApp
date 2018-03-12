@@ -39,72 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // ################################Drawer Element
-    Drawer firstDrawer = new Drawer(
-        child: new ListView(children: <Widget>[new Row(
-          children: <Widget>[
-            new Container(margin: new EdgeInsets.all(20.0),
-              child: new Icon(Icons.add_a_photo, size: 60.0,),),
-            new Text("Marco Gabrecht", style: Style.TITLE_LARGE),
-            new Container(margin: new EdgeInsets.all(10.0),
-              child: new Icon(Icons.edit, size: 20.0,),),
-          ],),
-        new Container(
-            margin: new EdgeInsets.all(10.0),
-            color: Colors.grey,
-            child: new Text("Termin erstellen", style: new TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.black))),
-        new Container(
-            margin: new EdgeInsets.all(10.0),
-            color: Colors.grey,
-            child: new Text("Studio bearbeiten", style: new TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.black))),
-        ],));
-    // #####################################################
-    // #####################################################Termine Tabel Row
-    List<TableRow> termin = new List<TableRow>();
-    termin.add(
-        new TableRow(
-          children: <Widget>[new Text("Uhrzeit", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Massageart (länge)", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Kudnenname", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Bezahlt", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Bemerkung", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          ],));
-    termin.add(
-        new TableRow(
-          children: <Widget>[new Text("17:30\n-18:00", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Ölmassage (30 min)", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Johannes Müller", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Icon(Icons.check_circle_outline),
-          new Text("10 Minuten später", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          ],));
-    termin.add(
-        new TableRow(
-          children: <Widget>[new Text("18:00\n-19:00", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Ölmassage (60 min)", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Text("Marco Hansen", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          new Icon(Icons.check_circle_outline),
-          new Text("", style: new TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold)),
-          ],));
-    // #########################################################################
     // ######################################################################### Table
     Widget tableView = new Column(children: <Widget>[
       _buildSeparation("Heute"),
@@ -135,8 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           new Icon(Icons.build)
                         ],)
                       ])),
-
-
                 ],),),
             new Container(decoration: new BoxDecoration(
                 border: new Border(bottom: new BorderSide())),),
@@ -149,7 +81,6 @@ class _MyHomePageState extends State<MyHomePage> {
             _buildExpansionTitle(
                 "19:30\n-20:00", "Kräuterstempelmassage (30 min)",
                 "Harrison Ford", true, _buildExpandExpandsionTitle()),
-
           ]
       ),
       _buildSeparation("Morgen"),
@@ -157,17 +88,11 @@ class _MyHomePageState extends State<MyHomePage> {
     // #########################################################################
 
     return new Scaffold(
-      drawer: firstDrawer,
-      appBar: new AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: new Text(widget.title),
-      ),
       body: new Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child:
-        new Row(
+        new Container(
+          margin: new EdgeInsets.fromLTRB(0.0, 24.5,5.0, 0.0),
+            child: new Row(
           children: <Widget>[
             new Column(children: <Widget>[
               new Container(
@@ -190,12 +115,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],)),
             ],
             ),
+
             // Row Element
             new Expanded(child: new Container(decoration: new BoxDecoration(
                 border: new Border(
-                    left: new BorderSide(color: Colors.grey))), child: tableView,))
+                    left: new BorderSide(color: Colors.grey))),
+              child: tableView,))
             // Row End
-          ],),
+          ],),),
+
       ),
       floatingActionButton: new FloatingActionButton(
         onPressed: _incrementCounter,
