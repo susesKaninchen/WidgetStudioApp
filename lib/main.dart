@@ -167,24 +167,30 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _buildExpandExpandsionTitle() {
     return new Column(children: <Widget>[new Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         new Container(margin: new EdgeInsets.all(5.0),
           child: new RaisedButton(
-            child: new Text("Termin Absagen"), onPressed: () {},),),
+            child: new Text("Termin Absagen"),
+            onPressed: () {},
+            color: Colors.redAccent,),),
         new Container(margin: new EdgeInsets.all(5.0),
           child: new RaisedButton(
-            child: new Text("Termin ändern"), onPressed: () {},),),
+            child: new Text("Termin ändern"),
+            onPressed: () {},
+            color: Colors.orangeAccent,),),
         new Container(margin: new EdgeInsets.all(5.0),
           child: new RaisedButton(
-            child: new Text("Bemerkung senden"), onPressed: () {},),),
+            child: new Text("Bemerkung senden"),
+            onPressed: () {},
+            color: Colors.greenAccent,),),
 
       ],),
-    new Row(children: <Widget>[
-      new Text("Bemerkung:"),
-      new Text(
-          "Ich bin schlecht n fd jif hidhig jjdshikufdujv bdj, vbh gvbkj fjflkdnlejo ghöfhdizgvkjbcjbclhvjhb chjdh kjfhls hj, hlahl h fhof hs", softWrap: true,)
-    ],),
+    new Container(margin: new EdgeInsets.all(5.0),
+        child: new Text(
+          "Bemerkung: Ich bin schlecht n fd jif hidhig jjdshikufdujv bdj, vbh gvbkj fjflkdnlejo ghöfhdizgvkjbcjbclhvjhb chjdh kjfhls hj, hlahl h fhof hs",
+          softWrap: true,)
+    ),
     ]);
   }
 
