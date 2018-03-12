@@ -99,19 +99,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: new Column(children: <Widget>[new Container(
                         margin: new EdgeInsets.all(10.0),
                         color: Colors.grey,
-                        child: new Text(
-                            "Termin erstellen", style: new TextStyle(
+                        child: new RaisedButton(
+                          child: new Text("Termin erstellen", style: new TextStyle(
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black))),
+                            color: Colors.black)), onPressed: () {},)),
                     new Container(
                         margin: new EdgeInsets.all(10.0),
                         color: Colors.grey,
-                        child: new Text(
-                            "Studio bearbeiten", style: new TextStyle(
+                        child:new RaisedButton(
+                            child: new Text("Studio bearbeiten", style: new TextStyle(
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black))),
+                            color: Colors.black)), onPressed: () {})),
                     ],)),
               ],
               ),
