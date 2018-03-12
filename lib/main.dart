@@ -100,18 +100,19 @@ class _MyHomePageState extends State<MyHomePage> {
                         margin: new EdgeInsets.all(10.0),
                         color: Colors.grey,
                         child: new RaisedButton(
-                          child: new Text("Termin erstellen", style: new TextStyle(
+                          child: new Text("Termin\nerstellen", style: new TextStyle(
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black)), onPressed: () {},)),
+                            color: Colors.black),textAlign: TextAlign.center), onPressed: () {},
+                        )),
                     new Container(
                         margin: new EdgeInsets.all(10.0),
                         color: Colors.grey,
                         child:new RaisedButton(
-                            child: new Text("Studio bearbeiten", style: new TextStyle(
+                            child: new Text("Studio\nbearbeiten", style: new TextStyle(
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black)), onPressed: () {})),
+                            color: Colors.black),textAlign: TextAlign.center), onPressed: () {})),
                     ],)),
               ],
               ),
