@@ -169,9 +169,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        new Text("Info"),
-        new Text("Info"),
-        new Text("info"),
+        new Column(children: <Widget>[
+          new Row(children: <Widget>[
+
+          ],),
+          new Text("Bemerkung: Leider bin ich heute schlecht drauf, könnten sie deswegen ganz nett zu mir sein? ich habe es auch Eilig, also bitte P.")
+        ],),
         new Column(
           children: <Widget>[
             new Container(margin: new EdgeInsets.all(5.0),
