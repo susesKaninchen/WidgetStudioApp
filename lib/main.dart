@@ -91,38 +91,38 @@ class _MyHomePageState extends State<MyHomePage> {
       body: new Center(
         child:
         new Container(
-          margin: new EdgeInsets.fromLTRB(0.0, 24.5,5.0, 0.0),
-            child: new Row(
-          children: <Widget>[
-            new Column(children: <Widget>[
-              new Container(
-                  child: new Column(children: <Widget>[new Container(
-                      margin: new EdgeInsets.all(10.0),
-                      color: Colors.grey,
-                      child: new Text(
-                          "Termin erstellen", style: new TextStyle(
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black))),
-                  new Container(
-                      margin: new EdgeInsets.all(10.0),
-                      color: Colors.grey,
-                      child: new Text(
-                          "Studio bearbeiten", style: new TextStyle(
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black))),
-                  ],)),
-            ],
-            ),
+          margin: new EdgeInsets.fromLTRB(0.0, 24.5, 5.0, 0.0),
+          child: new Row(
+            children: <Widget>[
+              new Column(children: <Widget>[
+                new Container(
+                    child: new Column(children: <Widget>[new Container(
+                        margin: new EdgeInsets.all(10.0),
+                        color: Colors.grey,
+                        child: new Text(
+                            "Termin erstellen", style: new TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black))),
+                    new Container(
+                        margin: new EdgeInsets.all(10.0),
+                        color: Colors.grey,
+                        child: new Text(
+                            "Studio bearbeiten", style: new TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black))),
+                    ],)),
+              ],
+              ),
 
-            // Row Element
-            new Expanded(child: new Container(decoration: new BoxDecoration(
-                border: new Border(
-                    left: new BorderSide(color: Colors.grey))),
-              child: tableView,))
-            // Row End
-          ],),),
+              // Row Element
+              new Expanded(child: new Container(decoration: new BoxDecoration(
+                  border: new Border(
+                      left: new BorderSide(color: Colors.grey))),
+                child: new ListView(children: <Widget>[tableView],),))
+              // Row End
+            ],),),
 
       ),
       floatingActionButton: new FloatingActionButton(
@@ -166,17 +166,19 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildExpandExpandsionTitle() {
-    return new Column(children: <Widget>[new Row(
+    return new Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        new Text("Termin Absagen"),
-        new Text("Termin vershcieben"),
-        new Icon(Icons.dehaze)
-      ],),
-    new Text("Termin Annehmen"),
-    new Text("Termin ablehnen"),
-    new Text("Termin ist zugesagt")
-    ],);
+        new Text("Info"),
+        new Text("Info"),
+        new Text("info"),
+        new Column(
+          children: <Widget>[
+            new RaisedButton(child: new Text("Termin Absagen")),
+            new RaisedButton(child: new Text("Termin vershcieben")),
+            new RaisedButton(child: new Text("Bemerkung senden")),
+          ],),
+      ],);
   }
 
   Container _buildSeparation(String text) {
