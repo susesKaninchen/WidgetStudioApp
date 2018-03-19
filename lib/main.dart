@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/AktionErstellenPage.dart';
 import 'GlobalStyle.dart';
 
 const bool drawerEnabeld = true;
@@ -15,6 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(title: 'Sabai-Sabai'),
+    routes: <String, WidgetBuilder> {
+      "aktionErstellen": (BuildContext context) => new AktionErstellenWidget(),},
     );
   }
 }
@@ -128,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),
                                 textAlign: TextAlign.center),
-                            onPressed: () {})),
+                            onPressed: () {Navigator.pushNamed(context, "aktionErstellen");})),
                     ],)),
                 new Container(
                     margin: new EdgeInsets.all(5.0),
