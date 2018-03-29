@@ -88,7 +88,7 @@ class AktionErstellen extends State<AktionErstellenWidget> {
           children: <Widget>[new Container(margin: new EdgeInsets.all(10.0),
             child: new Text("Massage: ", style: Style.TITLE_LARGE,),),
           new Material(child: new DropdownButton(
-            value: _value,
+            value: _massage,
             items: <DropdownMenuItem<int>>[
               new DropdownMenuItem(
                 child: new Text('Tai Massage'),
@@ -109,7 +109,7 @@ class AktionErstellen extends State<AktionErstellenWidget> {
             ],
             onChanged: (int value) {
               setState(() {
-                _value = value;
+                _massage = value;
               });
             },
           ),),
